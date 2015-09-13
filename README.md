@@ -14,7 +14,7 @@ import WebpackJsdomTapePlugin from "webpack-jsdom-tape-plugin"
 
 ## api
 
-### object new WebpackJsdomTapePlugin({ string: url, string: entry})
+### func WebpackJsdomTapePlugin({ string: url, string: entry})
 
 creates a test runner for when the given entry, at the given URL.
 
