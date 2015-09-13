@@ -1,0 +1,41 @@
+{
+  "name": "webpack-jsdom-tape-plugin",
+  "version": "1.0.0",
+  "description": "a webpack plugin to run tape tests over jsdom",
+  "main": "dist/index.js",
+  "scripts": {
+    "prebuild": "rm -fr dist && mkdir dist",
+    "build": "babel --stage 0 lib/index.js --out-file dist/index.js",
+    "test": "exit 0",
+    "bump": "npm run build && npm publish"
+  },
+  "files": [
+    "dist/index.js",
+    "README.md",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/bloodyowl/webpack-jsdom-tape-plugin.git"
+  },
+  "keywords": [
+    "tape",
+    "jsdom",
+    "webpack",
+    "webpack-plugin"
+  ],
+  "author": "bloodyowl",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bloodyowl/webpack-jsdom-tape-plugin/issues"
+  },
+  "homepage": "https://github.com/bloodyowl/webpack-jsdom-tape-plugin#readme",
+  "dependencies": {
+    "chalk": "^1.1.1",
+    "jsdom": "^6.3.0",
+    "tape": "^4.2.0"
+  },
+  "devDependencies": {
+    "babel": "^5.8.23"
+  }
+}
