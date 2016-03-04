@@ -14,7 +14,7 @@ import WebpackJsdomTapePlugin from "webpack-jsdom-tape-plugin"
 
 ## api
 
-### func WebpackJsdomTapePlugin({ string: url, string: entry, bool: exit = true})
+### func WebpackJsdomTapePlugin({ string: url, string: entry, bool: exit = true, bool: errorsOnly = false})
 
 creates a test runner for when the given `entry`, at the given `url`.
 
@@ -22,6 +22,8 @@ when the test is done, process exits with 0 if passed, and 1 if any errors occur
 `exit` option allow you to change this behavior of this plugin.
 Note that using `exit: false` might introduce a memory leak since jsdom might
 not clean everything properly.
+
+`errorsOnly` option allow to only show tests on error allowing clean ouput.
 
 
 ## test example
@@ -90,6 +92,7 @@ export default {
       // NOTE HERE THAT YOU WILL NEED AN ENTRY THAT SHOULD BE "tests"
       // to be sure a "tests.js" is in the assets list
       exit: false,
+      errorsOnly: false,
     })
   ]
 }
